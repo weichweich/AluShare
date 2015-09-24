@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="@string/setting_group_notification"
+        android:key="pref_key_storage_settings">
+        <CheckBoxPreference
+            android:key="vibrate_notification"
+            android:summary="@string/setting_vibrate_info"
+            android:title="@string/setting_vibrate_title"
+            android:defaultValue="true"/>
+        <CheckBoxPreference
+            android:key="sound_notification"
+            android:summary="@string/setting_sound_info"
+            android:title="@string/setting_sound_title"
+            android:defaultValue="true"/>
+        <CheckBoxPreference
+            android:key="led_notification"
+            android:summary="@string/setting_led_info"
+            android:title="@string/setting_led_title"
+            android:defaultValue="true"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/setting_group_chat"
+        android:key="pref_key_storage_settings">
+        <CheckBoxPreference
+            android:key="vibrate_mic_button"
+            android:summary="@string/setting_chat_mic_vibration"
+            android:title="@string/setting_vibrate_title"
+            android:defaultValue="true"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/setting_group_others"
+        android:key="pref_key_storage_settings">
+        <Preference android:title="@string/setting_start_tutorial"
+            android:key="start_tutorial"/>
+        <Preference android:title="@string/settings_about_title"
+            android:summary="@string/settings_about_title"
+            android:key="about"/>
+    </PreferenceCategory>
+</PreferenceScreen>

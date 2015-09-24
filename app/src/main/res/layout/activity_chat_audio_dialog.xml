@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+
+    <ImageButton
+        android:id="@+id/imageButtonCleara"
+        android:layout_width="@dimen/abc_action_button_min_width_material"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/abc_action_button_min_height_material"
+        android:src="@drawable/ic_clear_black_24dp"
+        android:background="@color/dialogColor"/>
+
+    <SeekBar
+        android:id="@+id/audio_seekbara"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/abc_action_button_min_height_material"
+        android:layout_weight="1"
+        android:layout_below="@+id/imageButtonStopa"
+        android:layout_toRightOf="@+id/imageButtonCleara"
+        android:layout_toLeftOf="@+id/imageButtonPlaya"
+        android:layout_toStartOf="@+id/imageButtonPlaya"
+        android:background="@color/dialogColor"/>
+
+    <ImageButton
+        android:id="@+id/imageButtonDonea"
+        android:layout_width="@dimen/abc_action_button_min_width_material"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/abc_action_button_min_height_material"
+        android:layout_gravity="right"
+        android:src="@drawable/ic_done_black_24dp"
+        android:background="@color/dialogColor"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageButton
+        android:id="@+id/imageButtonPlaya"
+        android:layout_width="@dimen/abc_action_button_min_width_material"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/abc_action_button_min_height_material"
+        android:layout_gravity="right"
+        android:src="@drawable/ic_play_arrow_black_24dp"
+        android:background="@color/dialogColor"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/imageButtonDonea"
+        android:layout_toStartOf="@+id/imageButtonDonea"/>
+
+    <ImageButton
+        android:id="@+id/imageButtonStopa"
+        android:layout_width="@dimen/abc_action_button_min_width_material"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/abc_action_button_min_height_material"
+        android:layout_gravity="right"
+        android:src="@drawable/ic_stop_black_24dp"
+        android:background="@color/dialogColor"
+        android:visibility="gone"/>
+</RelativeLayout>

@@ -1,0 +1,203 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearLayout_chat"
+    tools:context="edu.kit.tm.pseprak2.alushare.view.ChatActivity"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false">
+
+        <include layout="@layout/toolbar"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+        <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/relativeLayoutChat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:windowSoftInputMode="adjustPan">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/chat_recycler_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:listSelector="@android:color/transparent"
+            android:divider="@null"
+            android:scrollbars="vertical"
+            android:layout_above="@+id/editText_Message"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+
+        <github.ankushsachdeva.emojicon.EmojiconEditText
+            android:id="@+id/editText_Message"
+            android:hint="@string/chat_editTextView_hint"
+            emojicon:emojiconSize="22sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/abc_action_button_min_width_material"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/button_layout"
+            android:layout_toStartOf="@+id/button_layout"
+            android:layout_toRightOf="@+id/button_layout1"
+            android:layout_toEndOf="@+id/button_layout1"
+            android:scrollbars="vertical"
+            android:maxLines="10"
+            android:minLines="1"
+            android:textColor="#ff000000"
+            android:background="@color/dialogColor"
+            android:imeOptions="flagNoExtractUi"
+            />
+
+        <SeekBar
+            android:id="@+id/audio_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/surfaceViewFill1"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/button_layout1"
+            android:layout_toRightOf="@+id/button_layout1"
+            android:layout_toLeftOf="@+id/button_layout"
+            android:layout_toStartOf="@+id/button_layout"
+            android:background="@color/dialogColor"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/button_layout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/abc_action_button_min_height_material"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true">
+
+            <ImageButton
+                android:id="@+id/imageButtonSmiley"
+                android:layout_width="@dimen/abc_action_button_min_width_material"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/abc_action_button_min_height_material"
+                android:src="@drawable/ic_insert_emoticon_black_24dp"
+                android:background="@color/dialogColor"/>
+
+            <ImageButton
+                android:id="@+id/imageButtonClear"
+                android:layout_width="@dimen/abc_action_button_min_width_material"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/abc_action_button_min_height_material"
+                android:src="@drawable/ic_clear_black_24dp"
+                android:background="@color/dialogColor"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/button_layout"
+            android:layout_width="@dimen/send_button_width"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/abc_action_button_min_height_material"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true">
+
+            <Button
+                android:id="@+id/button_Send"
+                android:text="@string/send_button"
+                android:layout_width="@dimen/send_button_width"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/abc_action_button_min_height_material"
+                android:background="@color/dialogColor"
+                android:visibility="gone"
+                style="?android:borderlessButtonStyle"
+                android:textColor="#ff000000"/>
+
+            <ImageButton
+                android:id="@+id/imageButtonCamera"
+                android:layout_width="@dimen/abc_action_button_min_width_material"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/abc_action_button_min_height_material"
+                android:layout_gravity="right"
+                android:src="@drawable/ic_camera_alt_black_24dp"
+                android:background="@color/dialogColor"
+                android:visibility="visible"/>
+
+            <ImageButton
+                android:id="@+id/imageButtonMicro"
+                android:layout_width="@dimen/abc_action_button_min_width_material"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/abc_action_button_min_height_material"
+                android:src="@drawable/ic_mic_none_black_24dp"
+                android:background="@color/dialogColor"
+                android:visibility="visible"/>
+
+            <ImageButton
+                android:id="@+id/imageButtonPlay"
+                android:layout_width="@dimen/abc_action_button_min_width_material"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/abc_action_button_min_height_material"
+                android:layout_gravity="right"
+                android:src="@drawable/ic_play_arrow_black_24dp"
+                android:background="@color/dialogColor"
+                android:visibility="gone"/>
+
+            <ImageButton
+                android:id="@+id/imageButtonStop"
+                android:layout_width="@dimen/abc_action_button_min_width_material"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/abc_action_button_min_height_material"
+                android:layout_gravity="right"
+                android:src="@drawable/ic_stop_black_24dp"
+                android:background="@color/dialogColor"
+                android:visibility="gone"/>
+
+            <ImageButton
+                android:id="@+id/imageButtonDone"
+                android:layout_width="@dimen/abc_action_button_min_width_material"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/abc_action_button_min_height_material"
+                android:layout_gravity="right"
+                android:src="@drawable/ic_done_black_24dp"
+                android:background="@color/dialogColor"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <SurfaceView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/surfaceViewFill1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_above="@+id/button_layout"
+            android:layout_toLeftOf="@+id/editText_Message"
+            android:layout_toRightOf="@+id/editText_Message"
+            android:layout_toStartOf="@+id/editText_Message"
+            android:layout_toEndOf="@+id/editText_Message"
+            android:layout_alignTop="@+id/editText_Message"
+            android:background="@color/dialogColor" />
+
+        <SurfaceView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/surfaceViewFill2"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_above="@+id/button_layout"
+            android:layout_toLeftOf="@+id/editText_Message"
+            android:layout_toRightOf="@+id/editText_Message"
+            android:layout_toStartOf="@+id/editText_Message"
+            android:layout_toEndOf="@+id/editText_Message"
+            android:layout_alignTop="@+id/editText_Message"
+            android:background="@color/dialogColor" />
+
+        </RelativeLayout>
+</LinearLayout>

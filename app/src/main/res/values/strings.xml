@@ -1,0 +1,139 @@
+<resources>
+    <string name="app_name">AluShare</string>
+    <string name="app_service_name">AluShare Netzwerkservice</string>
+    <string name="title_activity_main">AluShare</string>
+
+    <string name="chattab">Chats</string>
+    <string name="filetab">Dateien</string>
+    <string name="contacttab">Kontakte</string>
+
+
+    <string name="action_settings">Einstellungen</string>
+    <string name="action_search">Suchen</string>
+    <string name="action_add">Neu</string>
+    <string name="action_show_own_info">Eigene Kontaktinformationen</string>
+
+
+    <string name="no_message_received">Noch keine Nachricht :(</string>
+    <string name="tor_id_text">Tor-ID</string>
+    <string name="title_activity_personal_info">PersonalInfoActivity</string>
+
+    <string name="title_activity_chat">ChatActivity</string>
+    <string name="title_activity_create_contact">Tor-Addresse hinzufügen</string>
+
+    <string name="send_button">Senden</string>
+
+    <string name="CHAT_ID">CHATID</string>
+    <string name="chat_editTextView_hint">Nachricht</string>
+
+    <string name="send_photo_video">Bilder oder Videos senden</string>
+
+    <string name="take_photo">Foto aufnemen</string>
+    <string name="take_video">Video aufnemen</string>
+    <string name="select_photo">Foto auswählen</string>
+    <string name="select_video">Video auswählen</string>
+    <string name="select_photo_video">Foto oder Video auswählen</string>
+    <string name="select_audio">Musik auswählen</string>
+    <string name="select_file">Datei auswählen</string>
+    <string name="audio_record_hint">Halten Sie Mikrofontaste gedrückt, um eine Tonnachricht aufzunehmen.</string>
+
+
+    <string-array name="action_change_status">
+        <item name="action_change_status_all">Alle</item>
+        <item name="action_change_status_sent">Gesendet</item>
+        <item name="action_change_status_received">Empfangen</item>
+    </string-array>
+    <string name="title_activity_choose_contact">ChooseContactActivity</string>
+
+    <string name="delete">Löschen</string>
+    <string name="show_in_contacts">In Kontakten anzeigen</string>
+
+    <string name="wait_for_bootstrap">Verbindung aufbauen.</string>
+
+
+    # Strings for netwirking notifier:
+    <string name="message_received">Nachricht empfangen!</string>
+    <string name="multi_message_received"> Nachrichten empfangen!</string>
+    <string name="message_send_failed">Nachricht konnte nicht gesendet werden!</string>
+    <string name="multi_message_send_failed"> Nachrichten konnte nicht gesendet werden!</string>
+    <string name="multi_received_failed_I"> ungelesene und </string>
+    <string name="multi_received_failed_II"> nicht gesendete Nachrichten! </string>
+
+
+    <string name="tor_running">Tor ist verbunden.</string>
+    <string name="tor_not_running">Tor ist nicht verbunden.</string>
+
+    <string name="groupname">Gruppenname</string>
+    <string name="groupmessage">Bitte Gruppennamen eingeben</string>
+    <string name="ok">OK</string>
+    <string name="back">Zurück</string>
+
+    <string name="link_to_contact">Zu Kontakt hinzufügen</string>
+
+    <string name="network_id">NETWORK_ID</string>
+
+    <string name="rename_chat">Gruppe umbenennen</string>
+    <string name="chooser_file">Bitte Auswählen</string>
+    <string name="title_activity_splash_screen">SplashScreen</string>
+    <string name="profile_not_found">Profilname konnte nicht gefunden werden</string>
+
+    <string name="message_chat_renamed">Chat umbenannt!</string>
+    <string name="message_file_renamed">Datei umbenannt!</string>
+    <string name="message_chat_deleted">Chat gelöscht!</string>
+    <string name="message_file_deleted">Datei gelöscht!</string>
+    <string name="message_rename_file">Datei umbennen</string>
+    <string name="message_contact_deleted">Kontakt gelöscht!</string>
+    <string name="message_contact_in_chat">Es existiert noch ein Chat mit diesem Kontakt!</string>
+    <string name="message_contact_not_found">Kontakt nicht gefunden!</string>
+    <string name="message_data_not_sent">Daten konnten nicht gesendet werden.</string>
+
+    <string name="message_contact_in_database">Kontakt bereits vorhanden!</string>
+    <string name="message_no_networkadress">Keine TorId angegeben</string>
+    <string name="message_own_networkaddress">Eigene TorId angegeben</string>
+    <string name="message_not_enough_contacts">Nicht genug Kontakte</string>
+
+    <string name="title_activity_preferences">Einstellungen</string>
+
+    <string name="about_this_app">Über diese App</string>
+    <string name="about_info">hiert about text eintragen</string>
+    <string name="to_existing_contact">Zu bestehendem Kontakt hinzufügen</string>
+    <string name="new_contact">Neuen Kontakt erstellen</string>
+    <string name="delete_group_chat_isAdmin">Gruppe löschen</string>
+    <string name="delete_group_chat_default">Gruppe verlassen</string>
+
+    <string name="setting_group_notification">Benachrichtigung</string>
+    <string name="setting_group_chat">Chateinstellungen</string>
+    <string name="setting_group_others">Sonstiges</string>
+
+    <string name="settings_about_title">Über diese App</string>
+    <string name="settings_about_info">hiert about text eintragen</string>
+    <string name="setting_vibrate_title">Vibration</string>
+    <string name="setting_sound_title">Klingelton</string>
+    <string name="setting_led_title">Benachrichtigungslicht</string>
+    <string name="setting_vibrate_info">beim Empfangen von Nachrichten</string>
+    <string name="setting_sound_info">beim Empfangen von Nachrichten</string>
+    <string name="setting_led_info">beim Empfangen von Nachrichten</string>
+    <string name="setting_chat_mic_vibration">beim Drücken und Loslassen der Mikrofontaste</string>
+    <string name="setting_start_tutorial">Tutorial starten</string>
+
+    <string name="add_contact_description">Hinweis: Hier können sie die Tor-Adresse einscannen oder per Hand eingeben.</string>
+
+    <string name="crash_dialog_title">Es ist ein Fehler aufgetreten</string>
+    <string name="crash_dialog_text">Fehlerdialog senden?</string>
+    <string name="crash_dialog_comment_prompt">Kommentar hinzugefügen</string>
+
+    <string name="imageButtonMicroDescription">Dient zum Starten (Drücken) und Stoppen (Loslassen) einer Tonaufnahmen.</string>
+    <string name="imageButtonStopDescription">Dient zum Stoppen einer abgespielten Tonaufnahme.</string>
+    <string name="imageButtonPlayDescription">Dient zum Abspielen einer Tonaufnahme.</string>
+    <string name="imageButtonDoneDescription">Um eine Tonaufnahme zu versenden.</string>
+    <string name="imageButtonClearDescription">Um eine Tonaufnahme nicht zu versenden.</string>
+    <string name="imageButtonSmileyDescription">Dient zum Ein- und Ausblenden des EmojiPopupWindows.</string>
+    <string name="imageButtonSendenDescription">Um eine Nachricht in der EmojiEditTextView/ Dialogfeld abzusenden.</string>
+    <string name="imageButtonCameraDescription">Um ein Foto oder Video aufzúnehmen/auswählen und zu versenden.</string>
+
+    <string name="yesterday">Gestern</string>
+    <string name="title_activity_tutorial">TutorialActivity</string>
+    <string name="finish_tutorial">Tutorial beenden</string>
+
+
+</resources>

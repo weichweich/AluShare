@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="edu.kit.tm.pseprak2.alushare">
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:name=".AluShare"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        >
+        <activity
+            android:name=".view.SplashScreen"
+            android:label="@string/title_activity_main"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_main">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.PersonalInfoActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_personal_info"></activity>
+        <activity
+            android:name=".view.ChatActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_chat"
+            android:windowSoftInputMode="adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.kit.tm.pseprak2.alushare.view.MainActivity" />
+        </activity>
+        <activity
+            android:name=".view.CreateContactActivity"
+            android:configChanges="orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:label="@string/title_activity_create_contact"
+            android:theme="@style/DialogTheme" />
+
+        <service android:name=".network.NetworkingService" />
+
+        <activity
+            android:name=".view.ChooseContactActivity"
+            android:label="@string/title_activity_choose_contact" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="edu.kit.tm.pseprak2.alushare.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/fileprovider" />
+        </provider>
+
+        <activity
+
+            android:name=".view.Preferences"
+            android:label="@string/title_activity_preferences"></activity>
+        <activity
+            android:name="org.acra.CrashReportDialog"
+            android:excludeFromRecents="true"
+            android:finishOnTaskLaunch="true"
+            android:launchMode="singleInstance"
+            android:process=":error_report"
+            android:theme="@style/DialogTheme" />
+        <activity
+            android:name=".view.TutorialActivity"
+            android:label="@string/title_activity_tutorial"
+            android:noHistory="true"
+            android:theme="@style/AppTheme"/>
+    </application>
+
+</manifest>

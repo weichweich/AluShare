@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.kit.tm.pseprak2.alushare.view.TutorialActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/toolbar_tutorial"/>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_tutorial"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="@color/primaryColor"
+        android:contentInsetLeft="0dp"
+        android:contentInsetStart="0dp"
+        android:theme="@style/ToolbarTheme"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp">
+
+        <ImageButton
+            android:id="@+id/button_left"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="left"
+            android:background="?android:selectableItemBackground"
+            android:clickable="true"
+            android:padding="16dp"
+            android:src="@drawable/ic_keyboard_arrow_left_white_24dp" />
+
+        <ImageButton
+            android:id="@+id/button_right"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="right"
+            android:background="?android:selectableItemBackground"
+            android:clickable="true"
+            android:padding="16dp"
+            android:src="@drawable/ic_keyboard_arrow_right_white_24dp" />
+
+        <ProgressBar
+            android:id="@+id/tutorial_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:progress="0"/>
+    </android.support.v7.widget.Toolbar>
+</RelativeLayout>

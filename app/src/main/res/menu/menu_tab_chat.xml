@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="edu.kit.tm.pseprak2.alushare.view.fragments.ChatTabFragment">
+
+    <item
+        android:id="@+id/action_add"
+        android:icon="@drawable/ic_group_add_white_24dp"
+        android:orderInCategory="1"
+        android:title="@string/action_add"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search_white_24dp"
+        android:orderInCategory="2"
+        android:title="@string/action_search"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="collapseActionView|ifRoom"/>
+</menu>

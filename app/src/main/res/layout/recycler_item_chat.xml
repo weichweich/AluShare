@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/layoutOutside"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical"
+        android:paddingLeft="0dp"
+        android:paddingBottom="0dp"
+        android:paddingRight="5dp"
+        android:paddingTop="0dp">
+
+        <LinearLayout
+            android:id="@+id/layoutContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/layoutBubble"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/out_message_bg"
+                android:layout_gravity="start"
+                android:paddingLeft="0dp"
+                android:paddingBottom="0dp"
+                android:paddingRight="0dp"
+                android:paddingTop="0dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/text_Sender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/holo_purple"
+                    android:textSize="12sp"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="0dp" />
+
+                <RelativeLayout
+                    android:id="@+id/layoutMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text_Sender"
+                    android:layout_gravity="start"
+                    android:paddingLeft="0dp"
+                    android:paddingBottom="0dp"
+                    android:paddingRight="0dp"
+                    android:paddingTop="0dp"
+                    android:orientation="vertical">
+
+                    <ProgressBar
+                        android:id="@+id/progressbar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="invisible"/>
+
+                    <ImageView
+                        android:id="@+id/imageView_File"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"/>
+
+                    <github.ankushsachdeva.emojicon.EmojiconTextView
+                        android:id="@+id/textView_Message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:layout_below="@+id/imageView_File"
+                        android:maxWidth="240dp"
+                        android:textIsSelectable="true"
+                        emojicon:emojiconSize="22sp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imageView_SendingFailed"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/ic_warning_black_24dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="12sp"
+            android:paddingBottom="0dp"
+            android:paddingTop="0dp"
+            android:paddingRight="2dp"
+            android:paddingLeft="2dp"
+            android:layout_gravity="end" />
+
+    </LinearLayout>
+</RelativeLayout>

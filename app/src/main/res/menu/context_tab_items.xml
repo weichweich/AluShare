@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/context_tab_contact_link_to_contact"
+        android:title="@string/link_to_contact" />
+    <item
+        android:id="@+id/context_tab_show_in_contacts"
+        android:title="@string/show_in_contacts" />
+
+    <item
+        android:id="@+id/context_tab_chat_rename"
+        android:title="@string/rename_chat"/>
+
+    <item
+        android:id="@+id/context_tab_chat_delete"/>
+</menu>

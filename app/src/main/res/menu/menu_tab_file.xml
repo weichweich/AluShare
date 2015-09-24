@@ -1,0 +1,34 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="edu.kit.tm.pseprak2.alushare.view.fragments.FileTabFragment">
+
+    <item
+        android:id="@+id/filter"
+        android:icon="@drawable/ic_sort_white_24dp"
+        android:orderInCategory="1"
+        android:title="Filter"
+        app:showAsAction="ifRoom">
+
+        <menu>
+            <group android:id="@+id/group_tab_file_sort">
+                <item
+                    android:id="@+id/filter_all"
+                    android:title="Alle" />
+                <item
+                    android:id="@+id/filter_send"
+                    android:title="Gesendet" />
+                <item
+                    android:id="@+id/filter_received"
+                    android:title="Empfangen" />
+            </group>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search_white_24dp"
+        android:orderInCategory="2"
+        android:title="@string/action_search"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="collapseActionView|ifRoom"/>
+</menu>

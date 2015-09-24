@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="320dp"
+    android:layout_height="match_parent">
+
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="connectToContact"
+            android:text="Zu bestehendem Kontakt hinzufügen"
+            android:background="@android:color/white"/>
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="createContact"
+            android:text="Neuen Kontakt erstellen"
+            android:background="@android:color/white"
+            />
+
+    </LinearLayout>
+
+
+
+
